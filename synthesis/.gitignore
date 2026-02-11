@@ -1,0 +1,13 @@
+*.jou
+*.log
+*/*.tcl
+
+*/Makefile
+*/*.cache/
+*/*.hw/
+*/*.runs/
+*/*.xpr
+
+# HDLmake steps
+*/project
+*/synthesize
