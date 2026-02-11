@@ -11,3 +11,5 @@
 # HDLmake steps
 */project
 */synthesize
+*/par
+*/bitstream
