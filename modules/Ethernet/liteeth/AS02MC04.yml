@@ -4,7 +4,9 @@ vendor: xilinx
 toolchain: vivado
 
 # Core -------------------------------------------------------------------------
-clk_freq: 1.5625e+8
+clk_freq: 1e+8
+refclk_freq: 1.5625e+8
+
 core: udp
 mac_address: 0x10e2d5000015
 ip_address: 192.168.1.15
