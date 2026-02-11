@@ -1,0 +1,8 @@
+set_property PACKAGE_PIN B6 [get_ports sfp_1_txn]
+set_property PACKAGE_PIN B7 [get_ports sfp_1_txp]
+set_property PACKAGE_PIN A3 [get_ports sfp_1_rxn]
+set_property PACKAGE_PIN A4 [get_ports sfp_1_rxp]
+set_property PACKAGE_PIN D6 [get_ports sfp_2_txn]
+set_property PACKAGE_PIN D7 [get_ports sfp_2_txp]
+set_property PACKAGE_PIN B1 [get_ports sfp_2_rxn]
+set_property PACKAGE_PIN B2 [get_ports sfp_2_rxp]
