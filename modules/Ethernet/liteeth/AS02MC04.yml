@@ -1,0 +1,29 @@
+# PHY --------------------------------------------------------------------------
+phy: USP_GTY_1000BASEX
+vendor: xilinx
+toolchain: vivado
+
+# Core -------------------------------------------------------------------------
+clk_freq: 1.5625e+8
+core: udp
+mac_address: 0x10e2d5000015
+ip_address: 192.168.1.15
+data_width: 8
+
+# UDP --------------------------------------------------------------------------
+udp_ports:
+  udp0:
+    with_broadcast: False
+    udp_port: 2000
+    data_width: 8
+    tx_fifo_depth: 16
+    rx_fifo_depth: 16
+    mode: "streamer"
+
+  udp1:
+    with_broadcast: False
+    udp_port: 2001
+    data_width: 8
+    tx_fifo_depth: 16
+    rx_fifo_depth: 16
+    mode: "streamer"
