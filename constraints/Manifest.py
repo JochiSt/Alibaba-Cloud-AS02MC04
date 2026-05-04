@@ -1,5 +1,5 @@
 files = [
-    "bitstream.xdc",
+    "general.xdc",
     "clocks.xdc",
     "LEDs.xdc",
     "SFP.xdc"
