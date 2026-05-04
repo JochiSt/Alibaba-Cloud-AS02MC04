@@ -1,11 +1,14 @@
 # PHY --------------------------------------------------------------------------
-phy: USP_GTY_1000BASEX
 vendor: xilinx
 toolchain: vivado
+device: xcku3p-ffvb676-2-e
+phy: USP_GTY_1000BASEX
 
 # Core -------------------------------------------------------------------------
 clk_freq: 1e+8
 refclk_freq: 1.5625e+8
+#refclk_freq: 2e+8
+#refclk_from_fabric: True
 
 core: udp
 mac_address: 0x10e2d5000015
