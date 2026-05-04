@@ -1,7 +1,11 @@
 *.jou
 *.log
-*/*.tcl
+*.tcl
 
+# allow file with name commands.tcl
+!commands.tcl
+
+# ignore generated files and folders
 */Makefile
 */*.cache/
 */*.hw/
