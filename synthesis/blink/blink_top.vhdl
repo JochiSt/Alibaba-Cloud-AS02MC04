@@ -4,10 +4,9 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 
 ENTITY blink_top IS
     PORT (
-        diff_100mhz_clk_p : IN STD_LOGIC;
-        diff_100mhz_clk_n : IN STD_LOGIC;
-        LED               : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-        KEY               : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
+        clk_100mhz_p : IN STD_LOGIC;
+        clk_100mhz_n : IN STD_LOGIC;
+        led               : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
 END blink_top;
 
@@ -19,8 +18,8 @@ BEGIN
     -- create differential clock buffer
     IBUFGDS_0 : ENTITY work.IBUFGDS
         PORT MAP(
-            I  => diff_100mhz_clk_p, -- normal input
-            IB => diff_100mhz_clk_n, -- inverted input
+            I  => clk_100mhz_p, -- normal input
+            IB => clk_100mhz_n, -- inverted input
             O  => sys_clk_100MHz     -- output
         );
 
@@ -30,7 +29,7 @@ BEGIN
         )
         PORT MAP(
             clk       => sys_clk_100MHz,
-            blink_out => LED(0)
+            blink_out => led(0)
         );
     blink_1 : ENTITY work.blink
         GENERIC MAP(
@@ -38,7 +37,7 @@ BEGIN
         )
         PORT MAP(
             clk       => sys_clk_100MHz,
-            blink_out => LED(1)
+            blink_out => led(1)
         );
     blink_2 : ENTITY work.blink
         GENERIC MAP(
@@ -46,7 +45,7 @@ BEGIN
         )
         PORT MAP(
             clk       => sys_clk_100MHz,
-            blink_out => LED(2)
+            blink_out => led(2)
         );
     blink_3 : ENTITY work.blink
         GENERIC MAP(
@@ -54,7 +53,7 @@ BEGIN
         )
         PORT MAP(
             clk       => sys_clk_100MHz,
-            blink_out => LED(3)
+            blink_out => led(3)
         );
 
 END ARCHITECTURE; -- behaviour
