@@ -45,7 +45,8 @@ syn_properties = [
     ["steps.phys_opt_design.is_enabled", "1"],
 
     #["steps.route_design.args.more options", "-verbose"],
-    ["steps.route_design.args.directive", "Explore"],
+    #["steps.route_design.args.directive", "Explore"],
+    ["steps.route_design.args.directive", "Performance_Retiming"],
 
     #["steps.post_route_phys_opt_design.args.more options", "-verbose"],
     ["steps.post_route_phys_opt_design.args.directive", "AddRetime"],
