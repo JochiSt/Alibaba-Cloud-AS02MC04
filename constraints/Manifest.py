@@ -1,6 +1,8 @@
 files = [
-    "general.xdc",
     "clocks.xdc",
+    "general.xdc",
+    "i2c.xdc",
     "LEDs.xdc",
-    "SFP.xdc"
+    "pcie.xdc",
+    "SFP.xdc",
 ]
